@@ -60,16 +60,21 @@ services:
 
 
 ## Links
+https://hub.docker.com/r/tsxcloud/vrising-ntsync
+
 This Docker image is based on TrueOsiris/docker-vrising and is largely compatible with it. For more detailed information, please also refer to:
 https://github.com/TrueOsiris/docker-vrising/blob/main/README.md
 
 
 ## Acknowledgments
 https://github.com/Kron4ek/Wine-Builds
+
 https://github.com/gogoout/vrising-server-arm64
+
 https://github.com/steamcmd/docker
+
 https://github.com/TrueOsiris/docker-vrising
 
-
+Like the repository? Give it a star! 🌟
 
 
