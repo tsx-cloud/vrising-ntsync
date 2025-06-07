@@ -1,0 +1,22 @@
+services:
+  vrising:
+    image: tsxcloud/vrising-ntsync:latest
+    environment:
+      - TZ=Europe/Kyiv
+      - SERVERNAME=vrising-ntsync
+      - ENABLE_PLUGINS=true
+    volumes:
+      - ./vrising/server:/mnt/vrising/server
+      - ./vrising/persistentdata:/mnt/vrising/persistentdata
+    ports:
+      - '9876:9876/udp'
+      - '9877:9877/udp'
+      - '25575:25575/tcp' #for Rcon:Enabled
+      - '9099:9090/tcp'   #127.0.0.1:9099/metrics for API:Enabled (prometeus)
+    restart: unless-stopped
+    network_mode: bridge
+    #This is required for ntsync to work inside Docker.
+    #If ntsync support is not enabled in your Linux kernel, comment out this section, otherwise Docker Compose won't start.
+    devices:
+      - /dev/ntsync:/dev/ntsync
+

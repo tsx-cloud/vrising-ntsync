@@ -1,0 +1,6 @@
+#Description of settings: https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md
+
+#Recommended setting for Unity
+BOX64_DYNAREC_STRONGMEM=1
+#Recommended setting for Unity
+BOX64_DYNAREC_BIGBLOCK=0

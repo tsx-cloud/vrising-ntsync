@@ -1,0 +1,29 @@
+﻿{
+  "Name": "Set server name via SERVERNAME environment variable",
+  "Description": "Description",
+  "Port": 9876,
+  "QueryPort": 9877,
+  "MaxConnectedUsers": 20,
+  "MaxConnectedAdmins": 5,
+  "ServerFps": 60,
+  "SaveName": "tsx",
+  "LowerFPSWhenEmpty": true,
+  "LowerFPSWhenEmptyValue": 1,
+  "Password": "12345670",
+  "Secure": true,
+  "ListOnSteam": true,
+  "ListOnEOS": true,
+  "AutoSaveCount": 21,
+  "AutoSaveInterval": 200,
+  "CompressSaveFiles": false,
+  "AdminOnlyDebugEvents": true,
+  "DisableDebugEvents": false,
+  "API": {
+    "Enabled": true
+  },
+  "Rcon": {
+    "Enabled": true,
+    "Port": 25575,
+    "Password": "12345670"
+  }
+}
