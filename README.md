@@ -72,7 +72,9 @@ services:
 
 
 ## Links
-https://hub.docker.com/r/tsxcloud/vrising-ntsync
+https://hub.docker.com/r/tsxcloud/vrising-ntsync  
+You can leave comments here:  
+https://www.reddit.com/r/vrising/comments/1l93nks/vrising_bepinex_arm  
 
 This Docker image is based on TrueOsiris/docker-vrising and is largely compatible with it. For more detailed information, please also refer to:
 https://github.com/TrueOsiris/docker-vrising/blob/main/README.md
