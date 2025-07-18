@@ -14,6 +14,7 @@ services:
       - '25575:25575/tcp' #for Rcon:Enabled
       - '9099:9090/tcp'   #127.0.0.1:9099/metrics for API:Enabled (prometeus)
     restart: unless-stopped
+    stop_grace_period: 30s
     network_mode: bridge
     #This is required for ntsync to work inside Docker.
     #If ntsync support is not enabled in your Linux kernel, comment out this section, otherwise Docker Compose won't start.
