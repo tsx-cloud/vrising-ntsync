@@ -72,7 +72,7 @@ services:
 
 
 ## Links
-https://hub.docker.com/r/tsxcloud/vrising-ntsync  
+You can find the Docker builds here: https://hub.docker.com/r/tsxcloud/vrising-ntsync  
 You can leave comments here:  
 https://www.reddit.com/r/vrising/comments/1l93nks/vrising_bepinex_arm  
 
