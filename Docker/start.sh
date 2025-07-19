@@ -128,7 +128,7 @@ fi
 echo " "
 echo "Starting V Rising Dedicated Server with name $SERVERNAME"
 start_server() {
-	wine /mnt/vrising/server/VRisingServer.exe -serverName "$SERVERNAME" -persistentDataPath $p -logFile "${l}/$logfile" 2>&1 &
+	wine /mnt/vrising/server/VRisingServer.exe -serverName "$SERVERNAME" -persistentDataPath $p -logFile "${l}/$logfile" -nographics -batchmode 2>&1 &
 }
 start_server
 # Gets the PID of the last command (its Wine)
