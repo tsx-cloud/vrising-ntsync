@@ -3,11 +3,11 @@ FROM tsxcloud/steamcmd-wine-ntsync:latest
 COPY server/ defaults/server/
 ENV ENABLE_PLUGINS=false
 
-COPY hello_x64 /hello_x64
-RUN chmod +x /hello_x64
+COPY emulators.rc .
 
-COPY load_box64_env.sh /load_box64_env.sh
-RUN chmod +x /load_box64_env.sh
+COPY --chmod=775 load_emulators_env.sh /load_emulators_env.sh
+
+COPY --chmod=775 print_app_versions.sh /print_app_versions.sh
 
 COPY start.sh /start.sh
 RUN chmod +x /start.sh

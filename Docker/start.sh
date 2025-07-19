@@ -2,6 +2,7 @@
 s=/mnt/vrising/server
 p=/mnt/vrising/persistentdata
 l="${p}/logs"
+SETTINGS="${p}/Settings"
 
 term_handler() {
 	echo "Shutting down Server"
@@ -19,6 +20,13 @@ term_handler() {
 }
 
 trap 'term_handler' SIGTERM SIGINT
+
+echo "Load extra Box64 and Fex-emu settings from emulators.rc"
+source /load_emulators_env.sh
+echo " "
+
+/print_app_versions.sh
+
 
 if [ -z "$LOGDAYS" ]; then
 	LOGDAYS=30
@@ -41,25 +49,6 @@ if [ ! -d "$s/BepInEx" ]; then
 	cp -r defaults/server/. "$s/"
 else
     echo "The folder $s/BepInEx already exists, copying is not needed."
-fi
-echo " "
-
-echo "Loading env vars for box64"
-if [ "$TARGETARCH" = "arm64" ]; then
-    box64=box64
-elif [ "$TARGETARCH" = "amd64" ]; then
-    box64=""
-fi
-source /load_box64_env.sh
-echo " "
-
-echo "Checking if x64 Linux programs can be executed"
-echo "Value of box64 the variable is $box64"
-echo "Value of TARGETARCH the variable is $TARGETARCH"
-if $box64 /hello_x64; then
-    echo "Test x64 program started successfully."
-else
-    echo "Test x64 program failed to start."
 fi
 echo " "
 
